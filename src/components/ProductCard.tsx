@@ -11,11 +11,19 @@ export default function ProductCard({ product }: { product: Product }) {
       className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
     >
       <div className="aspect-square bg-gray-100 relative overflow-hidden">
-        <img
-          src={product.images[0]}
-          alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+        {product.images[0] ? (
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+            <span className="text-sm font-semibold text-gray-400 text-center px-4">
+              {product.name}
+            </span>
+          </div>
+        )}
         {product.originalPrice && (
           <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
             SALE

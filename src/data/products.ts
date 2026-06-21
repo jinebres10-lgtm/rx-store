@@ -51,14 +51,13 @@ export const products: Product[] = [
     category: "calleras",
     subcategory: "Legacy",
     brand: "LIVE4WOD",
-    images: ["/images/calleras-ursus-kit-negro.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
       { name: "Naranja", hex: "#f97316" },
     ],
     inStock: true,
-    featured: true,
     tags: ["calleras", "grips", "cuero", "legacy"],
   },
   {
@@ -71,7 +70,7 @@ export const products: Product[] = [
     category: "calleras",
     subcategory: "Spider",
     brand: "LIVE4WOD",
-    images: ["/images/calleras-ursus-kit-negro-rosa.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
@@ -90,7 +89,7 @@ export const products: Product[] = [
     category: "calleras",
     subcategory: "Fibra",
     brand: "LIVE4WOD",
-    images: ["/images/calleras-ursus-kit-blanco-turquesa.jpg"],
+    images: [],
     sizes: ["S", "M", "L"],
     inStock: true,
     tags: ["calleras", "grips", "fibra", "ligeras"],
@@ -105,14 +104,13 @@ export const products: Product[] = [
     category: "calleras",
     subcategory: "Fibra de Carbono",
     brand: "LIVE4WOD",
-    images: ["/images/calleras-ursus-kit-negro-blanco.jpg"],
+    images: [],
     sizes: ["S", "M", "L"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
       { name: "Gris", hex: "#6b7280" },
     ],
     inStock: true,
-    featured: true,
     tags: ["calleras", "grips", "carbono", "premium"],
   },
 
@@ -127,7 +125,7 @@ export const products: Product[] = [
     category: "cinturones",
     subcategory: "Con Parche",
     brand: "LIVE4WOD",
-    images: ["/images/wrist-wraps-lift.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
@@ -149,7 +147,7 @@ export const products: Product[] = [
     category: "cinturones",
     subcategory: "Marquilla 3D",
     brand: "LIVE4WOD",
-    images: ["/images/wrist-wraps-neon.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
@@ -170,7 +168,7 @@ export const products: Product[] = [
     category: "camisetas",
     subcategory: "Algodón",
     brand: "LIVE4WOD",
-    images: ["/images/shorts-uva.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
@@ -195,7 +193,7 @@ export const products: Product[] = [
     category: "camisetas",
     subcategory: "Oversize",
     brand: "LIVE4WOD",
-    images: ["/images/shorts-uva.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
@@ -215,7 +213,7 @@ export const products: Product[] = [
     category: "camisetas",
     subcategory: "DryFit",
     brand: "LIVE4WOD",
-    images: ["/images/shorts-uva.jpg"],
+    images: [],
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Blanco", hex: "#f5f5f5" },
@@ -236,7 +234,7 @@ export const products: Product[] = [
     category: "camisetas",
     subcategory: "Mujer",
     brand: "LIVE4WOD",
-    images: ["/images/shorts-uva.jpg"],
+    images: [],
     sizes: ["XS", "S", "M", "L"],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
@@ -245,6 +243,25 @@ export const products: Product[] = [
     ],
     inStock: true,
     tags: ["camiseta", "mujer", "femenino"],
+  },
+  {
+    id: "shorts-024",
+    slug: "shorts-entrenamiento",
+    name: "Shorts de Entrenamiento",
+    description:
+      "Shorts de entrenamiento con tela ligera y resistente. Cintura elástica con cordón ajustable. Diseño funcional con bolsillos laterales.",
+    price: 55000,
+    category: "camisetas",
+    subcategory: "Shorts",
+    brand: "LIVE4WOD",
+    images: ["/images/shorts-uva.jpg"],
+    sizes: ["S", "M", "L", "XL"],
+    colors: [
+      { name: "Uva", hex: "#7e22ce" },
+      { name: "Negro", hex: "#1a1a1a" },
+    ],
+    inStock: true,
+    tags: ["shorts", "pantaloneta", "entrenamiento"],
   },
 
   // ── GAFAS ──
@@ -258,7 +275,7 @@ export const products: Product[] = [
     category: "gafas",
     subcategory: "Performance",
     brand: "LIVE4WOD",
-    images: ["/images/speed-rope-plata.jpg"],
+    images: [],
     colors: [
       { name: "Negro/Rojo", hex: "#dc2626" },
       { name: "Negro/Azul", hex: "#2563eb" },
@@ -278,7 +295,7 @@ export const products: Product[] = [
     category: "gafas",
     subcategory: "Style",
     brand: "LIVE4WOD",
-    images: ["/images/speed-rope-plata.jpg"],
+    images: [],
     colors: [
       { name: "Transparente", hex: "#e5e7eb" },
       { name: "Negro", hex: "#1a1a1a" },
@@ -299,7 +316,7 @@ export const products: Product[] = [
     category: "tacticos",
     subcategory: "Canguros",
     brand: "LIVE4WOD",
-    images: ["/images/morrales-rosa.jpg"],
+    images: [],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
       { name: "Azul", hex: "#1e40af" },
@@ -318,7 +335,7 @@ export const products: Product[] = [
     category: "tacticos",
     subcategory: "Chalecos",
     brand: "LIVE4WOD",
-    images: ["/images/morrales-rosa.jpg"],
+    images: [],
     colors: [
       { name: "Negro", hex: "#1a1a1a" },
       { name: "Verde Militar", hex: "#4d7c0f" },
@@ -449,25 +466,6 @@ export const products: Product[] = [
     tags: ["muñequeras", "wrist wraps", "soporte", "levantamiento"],
   },
   {
-    id: "shorts-024",
-    slug: "shorts-entrenamiento",
-    name: "Shorts de Entrenamiento",
-    description:
-      "Shorts de entrenamiento con tela ligera y resistente. Cintura elástica con cordón ajustable. Diseño funcional con bolsillos laterales.",
-    price: 55000,
-    category: "camisetas",
-    subcategory: "Shorts",
-    brand: "LIVE4WOD",
-    images: ["/images/shorts-uva.jpg"],
-    sizes: ["S", "M", "L", "XL"],
-    colors: [
-      { name: "Uva", hex: "#7e22ce" },
-      { name: "Negro", hex: "#1a1a1a" },
-    ],
-    inStock: true,
-    tags: ["shorts", "pantaloneta", "entrenamiento"],
-  },
-  {
     id: "tobilleras-021",
     slug: "tobilleras",
     name: "Tobilleras",
@@ -496,7 +494,7 @@ export const products: Product[] = [
     category: "accesorios",
     subcategory: "Balacas",
     brand: "LIVE4WOD",
-    images: ["/images/wrist-wraps-neon.jpg"],
+    images: [],
     colors: [
       { name: "Rosa", hex: "#ec4899" },
       { name: "Negro", hex: "#1a1a1a" },
@@ -515,7 +513,7 @@ export const products: Product[] = [
     category: "accesorios",
     subcategory: "Parches",
     brand: "LIVE4WOD",
-    images: ["/images/wrist-wraps-lift.jpg"],
+    images: [],
     inStock: true,
     tags: ["parche", "bordado", "personalización"],
   },

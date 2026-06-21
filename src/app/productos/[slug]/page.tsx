@@ -78,11 +78,20 @@ export default function ProductDetailPage({
         {/* Image gallery */}
         <div>
           <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden">
-            <img
-              src={product.images[selectedImage]}
-              alt={product.name}
-              className="w-full h-full object-cover"
-            />
+            {product.images[selectedImage] ? (
+              <img
+                src={product.images[selectedImage]}
+                alt={product.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="text-center text-gray-400">
+                  <p className="text-2xl font-bold">{product.name}</p>
+                  <p className="text-sm mt-2">Imagen próximamente</p>
+                </div>
+              </div>
+            )}
           </div>
           {product.images.length > 1 && (
             <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
