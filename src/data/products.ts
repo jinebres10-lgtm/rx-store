@@ -520,15 +520,19 @@ export const products: Product[] = [
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((p) => p.slug === slug);
+  return products.find((p) => p.slug === slug && p.images.length > 0);
 }
 
 export function getProductsByCategory(category: string): Product[] {
-  return products.filter((p) => p.category === category);
+  return products.filter((p) => p.category === category && p.images.length > 0);
 }
 
 export function getFeaturedProducts(): Product[] {
-  return products.filter((p) => p.featured);
+  return products.filter((p) => p.featured && p.images.length > 0);
+}
+
+export function getVisibleProducts(): Product[] {
+  return products.filter((p) => p.images.length > 0);
 }
 
 export function formatPrice(price: number): string {
