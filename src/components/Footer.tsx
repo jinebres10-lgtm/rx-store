@@ -36,10 +36,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/productos?category=camisetas"
+                  href="/productos?category=ropa"
                   className="hover:text-white transition-colors"
                 >
-                  Camisetas
+                  Ropa
                 </Link>
               </li>
               <li>

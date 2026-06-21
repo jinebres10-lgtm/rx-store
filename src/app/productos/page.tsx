@@ -3,13 +3,13 @@
 import { Suspense, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
-import { getVisibleProducts } from "@/data/products";
+import { products } from "@/data/products";
 import { Category, CATEGORY_LABELS } from "@/lib/types";
 
 const categories: Category[] = [
   "calleras",
   "cinturones",
-  "camisetas",
+  "ropa",
   "gafas",
   "tacticos",
   "accesorios",
@@ -26,10 +26,8 @@ function ProductosContent() {
     "default"
   );
 
-  const visibleProducts = useMemo(() => getVisibleProducts(), []);
-
   const filtered = useMemo(() => {
-    let result = visibleProducts;
+    let result = products;
 
     if (selectedCategory) {
       result = result.filter((p) => p.category === selectedCategory);
@@ -53,7 +51,7 @@ function ProductosContent() {
     }
 
     return result;
-  }, [visibleProducts, selectedCategory, searchQuery, sortBy]);
+  }, [selectedCategory, searchQuery, sortBy]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

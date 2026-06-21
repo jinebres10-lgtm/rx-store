@@ -7,7 +7,7 @@ import { Category } from "@/lib/types";
 const categories: Category[] = [
   "calleras",
   "cinturones",
-  "camisetas",
+  "ropa",
   "gafas",
   "tacticos",
   "accesorios",

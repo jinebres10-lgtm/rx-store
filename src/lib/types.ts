@@ -31,7 +31,7 @@ export interface CartItem {
 export type Category =
   | "calleras"
   | "cinturones"
-  | "camisetas"
+  | "ropa"
   | "gafas"
   | "tacticos"
   | "accesorios";
@@ -39,7 +39,7 @@ export type Category =
 export const CATEGORY_LABELS: Record<Category, string> = {
   calleras: "Calleras",
   cinturones: "Cinturones",
-  camisetas: "Camisetas",
+  ropa: "Ropa",
   gafas: "Gafas",
   tacticos: "Tácticos",
   accesorios: "Accesorios",
@@ -48,10 +48,10 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 export const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
   calleras: "Protección y agarre para tus WODs",
   cinturones: "Soporte lumbar para levantamientos pesados",
-  camisetas: "Algodón, Oversize y DryFit",
+  ropa: "Camisetas, tops, licras, pantalonetas y más",
   gafas: "Performance y estilo para entrenar",
   tacticos: "Morrales, chalecos y canguros",
-  accesorios: "Balacas, parches, tobilleras y más",
+  accesorios: "Lazos, muñequeras, rodilleras y más",
 };
 
 export interface OrderFormData {

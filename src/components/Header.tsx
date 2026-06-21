@@ -30,10 +30,10 @@ export default function Header() {
               Calleras
             </Link>
             <Link
-              href="/productos?category=camisetas"
+              href="/productos?category=ropa"
               className="text-sm font-medium hover:text-red-400 transition-colors"
             >
-              Camisetas
+              Ropa
             </Link>
             <Link
               href="/productos?category=tacticos"
