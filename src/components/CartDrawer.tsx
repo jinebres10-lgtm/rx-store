@@ -81,10 +81,12 @@ export default function CartDrawer() {
                   key={`${item.product.id}-${item.selectedSize}-${item.selectedColor}`}
                   className="flex gap-4 py-4 border-b border-gray-100"
                 >
-                  <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center shrink-0">
-                    <span className="text-xs text-gray-400 text-center px-1">
-                      {item.product.subcategory}
-                    </span>
+                  <div className="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden shrink-0">
+                    <img
+                      src={item.product.images[0]}
+                      alt={item.product.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
                   <div className="flex-1 min-w-0">

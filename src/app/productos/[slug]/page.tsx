@@ -23,6 +23,7 @@ export default function ProductDetailPage({
   );
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(0);
 
   if (!product) {
     return (
@@ -74,26 +75,36 @@ export default function ProductDetailPage({
       </nav>
 
       <div className="grid md:grid-cols-2 gap-12">
-        {/* Image */}
-        <div className="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center">
-          <div className="text-center text-gray-400">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={0.5}
-              stroke="currentColor"
-              className="w-24 h-24 mx-auto mb-4 opacity-40"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z"
-              />
-            </svg>
-            <p className="text-lg font-medium">{product.name}</p>
-            <p className="text-sm">{product.subcategory}</p>
+        {/* Image gallery */}
+        <div>
+          <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden">
+            <img
+              src={product.images[selectedImage]}
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
           </div>
+          {product.images.length > 1 && (
+            <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
+              {product.images.slice(0, 6).map((img, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelectedImage(i)}
+                  className={`w-16 h-16 rounded-lg overflow-hidden shrink-0 border-2 transition-all ${
+                    selectedImage === i
+                      ? "border-red-500"
+                      : "border-transparent hover:border-gray-300"
+                  }`}
+                >
+                  <img
+                    src={img}
+                    alt={`${product.name} ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Details */}

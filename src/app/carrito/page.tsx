@@ -50,10 +50,12 @@ export default function CarritoPage() {
             key={`${item.product.id}-${item.selectedSize}-${item.selectedColor}`}
             className="flex gap-6 bg-white border border-gray-100 rounded-xl p-6"
           >
-            <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center shrink-0">
-              <span className="text-xs text-gray-400 text-center px-2">
-                {item.product.subcategory}
-              </span>
+            <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden shrink-0">
+              <img
+                src={item.product.images[0]}
+                alt={item.product.name}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="flex-1 min-w-0">
